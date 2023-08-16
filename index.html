@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link id="favicon" rel="icon" href="default-icon.png" type="image/png">
+<script>
+  // Function to check if the user is using an Apple device
+  function isAppleDevice() {
+    return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  }
+
+  // Function to set the favicon based on the user's device
+  function setFaviconBasedOnDevice() {
+    var faviconElement = document.getElementById('favicon');
+
+    if (isAppleDevice()) {
+      faviconElement.href = 'apple-favicon.png'; // Set the favicon for Apple devices
+    } else {
+      faviconElement.href = 'default-icon.png'; // Set a default favicon for other devices
+    }
+  }
+</script>
+</head>
+<body>
+
+<!-- Call the function to set the favicon based on the device -->
+<script>
+  setFaviconBasedOnDevice();
+</script>
+
+</body>
+</html>
